@@ -23,3 +23,11 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+.appDiv {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.appDiv video {
+  object-fit: cover;
+}
