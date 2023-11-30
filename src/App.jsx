@@ -1,9 +1,10 @@
 import { PageContainer } from "./Components/GridWiev";
+import LoginSignUp from "./Components/LoginSignUp/LoginSignUp";
 
 function App() {
   return (
     <PageContainer>
-      burada login singup ı ayarlarız
+      <LoginSignUp />
     </PageContainer>
   );
 }
