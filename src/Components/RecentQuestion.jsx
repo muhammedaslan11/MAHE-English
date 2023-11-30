@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   FaHouseUser,
   FaRegThumbsDown,
@@ -6,10 +7,11 @@ import {
   FaRegCalendarDays,
 } from "react-icons/fa6";
 
-export const RecentQuestion = () => {
+export const RecentQuestion = ({ width }) => {
   return (
     <div
       style={{
+        width: width ? width : "",
         boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
       }}
       className="bg-white flex rounded-[10px] flex-col p-5 gap-2"
@@ -42,8 +44,8 @@ export const RecentQuestion = () => {
         }}
       >
         <p style={{ fontSize: ".9rem" }}>
-          Lorem, ipsum dolor sit amet casdasdasdaadasdasasdasdonsectetur
-          adipisicing elit. Ut, dolor!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+          aliquid fugit voluptatem impedit doloremque tenetur!
         </p>
       </div>
       <div>
@@ -72,4 +74,8 @@ export const RecentQuestion = () => {
       </div>
     </div>
   );
+};
+
+RecentQuestion.propTypes = {
+  width: PropTypes.node,
 };
