@@ -5,6 +5,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomePage } from "./Pages/HomePage/HomePage.jsx";
 import { UserPage } from "./Pages/UserPage/UserPage.jsx";
+import UserSettings from "./Pages/UserSettings/UserSettings.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/userinfo",
     element: <UserPage />,
+  },
+  {
+    path: "/usersettings",
+    element: <UserSettings />,
   },
 ]);
 
