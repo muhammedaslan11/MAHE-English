@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaUserAlt, FaLock, FaEnvelope } from "react-icons/fa";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import "./LoginSignUp.css";
-import { SignUp, login } from "../../lib/pocketbase/auth/auth";
+import { SignUp, login, ff } from "../../lib/pocketbase/auth/auth";
 
 const LoginSignUp = () => {
   const [visible, setVisible] = useState(false);
@@ -96,17 +96,19 @@ const LoginSignUp = () => {
                   });
                 }}
               />
-              <div className="pass-show" onClick={passwordVisible}>
+              <button className="pass-show" onClick={passwordVisible}>
                 {visible ? <AiFillEye /> : <AiFillEyeInvisible />}
-              </div>
+              </button>
             </div>
-            <div
-              onClick={() => {
-                alert("Her Gördüğüne Tıklama!!!");
-              }}
-              className="forgot-password"
-            >
-              Lost Password?<span>Click Here!</span>
+            <div className="under-text">
+              I don't have an account!{" "}
+              <span
+                onClick={() => {
+                  SetAction("Sign Up");
+                }}
+              >
+                Click Here!
+              </span>
             </div>
             {/* ------------------------Login----------------------------------- */}
           </>
@@ -154,9 +156,9 @@ const LoginSignUp = () => {
                   });
                 }}
               />
-              <div className="pass-show" onClick={passwordVisible}>
+              <button className="pass-show" onClick={passwordVisible}>
                 {visible ? <AiFillEye /> : <AiFillEyeInvisible />}
-              </div>
+              </button>
             </div>
             <div className="input">
               <FaLock />
@@ -191,18 +193,18 @@ const LoginSignUp = () => {
         )}
 
         <div className="submit-container">
-          <div
+          <button
             className={action === "Login" ? "submit color-gray" : "submit"}
             onClick={handleSignUpClick}
           >
             Sign Up
-          </div>
-          <div
+          </button>
+          <button
             className={action === "Sign Up" ? "submit color-gray" : "submit"}
             onClick={handleLoginClick}
           >
             Login
-          </div>
+          </button>
         </div>
       </div>
     </div>

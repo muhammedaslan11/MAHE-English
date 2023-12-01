@@ -20,7 +20,7 @@
   width: 100%;
 }
 .text {
-  color: #3c009d;
+  color: #fff;
   font-size: 37px;
   font-weight: 700;
 }
@@ -28,7 +28,7 @@
 .underline {
   width: 61px;
   height: 6px;
-  background: #3c009d;
+  background: #fff;
   border-radius: 9px;
 }
 .inputs {
@@ -58,15 +58,16 @@
   color: #797979;
   font-size: 19px;
 }
-.forgot-password {
+.under-text {
   margin-top: 5px;
   color: #fff;
   width: 350px;
   margin: auto;
   font-size: 18px;
 }
-.forgot-password span {
-  color: #4c00b4;
+.under-text span {
+  color: #fff;
+  text-decoration: underline;
   cursor: pointer;
 }
 .submit-container {

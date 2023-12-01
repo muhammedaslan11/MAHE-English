@@ -31,3 +31,8 @@ export const SignUp = async (data) => {
     throw error;
   }
 };
+
+export const ff = async () => {
+  const res = await pb.collection("users").getFullList();
+  console.log("object", res);
+};
