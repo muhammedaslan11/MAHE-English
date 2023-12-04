@@ -4,7 +4,7 @@ import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomePage } from "./Pages/HomePage/HomePage.jsx";
-import { UserPage } from "./Pages/UserPage/UserPage.jsx";
+import { UserInfoPage } from "./Pages/UserInfoPage/UserInfoPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/userinfo",
-    element: <UserPage />,
+    element: <UserInfoPage />,
   },
 ]);
 
