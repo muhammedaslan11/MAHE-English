@@ -12,17 +12,19 @@ export const PageContainer = ({ children }) => {
   );
 };
 
-export const Container = ({ children, overflow }) => {
+export const Container = ({ children, overflow, direction }) => {
   let o = !overflow ? "overflow-hidden" : overflow;
+  let d = !direction ? null : direction;
 
   return (
     <div
       style={{
+        maxWidth: "1280px",
         backgroundColor: "#F5F5F5",
         boxShadow:
           "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
       }}
-      className={`h-full flex-col max-w-screen-xl px-12 py-4 flex ${o}`}
+      className={`h-full px-12 py-4 flex ${o} ${d}`}
     >
       {children}
     </div>
@@ -38,6 +40,7 @@ export const Column = ({
   backgroundColor,
   boxShadow,
   className,
+  center,
 }) => {
   var x = window;
 
@@ -78,7 +81,9 @@ export const Column = ({
         backgroundColor: backgroundColor,
         boxShadow: boxShadow,
       }}
-      className={`flex flex-col gap-3 p-2 rounded-[10px] ${className}`}
+      className={`flex flex-col gap-3 p-2 rounded-[10px] ${className} ${
+        center && "items-center"
+      }`}
     >
       {children}
     </div>
@@ -98,6 +103,7 @@ PageContainer.propTypes = {
 Container.propTypes = {
   children: PropTypes.node,
   overflow: PropTypes.string,
+  direction: PropTypes.string,
 };
 
 Column.propTypes = {
@@ -110,6 +116,7 @@ Column.propTypes = {
   backgroundColor: PropTypes.string,
   boxShadow: PropTypes.string,
   className: PropTypes.string,
+  center: PropTypes.string,
 };
 
 Row.propTypes = {

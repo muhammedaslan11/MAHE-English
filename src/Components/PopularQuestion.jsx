@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   FaRegThumbsUp,
   FaHouseUser,
@@ -5,7 +6,7 @@ import {
   FaRegCalendarDays,
 } from "react-icons/fa6";
 
-export const PopularQuestion = () => {
+export const PopularQuestion = ({ url }) => {
   return (
     <div
       style={{
@@ -29,14 +30,16 @@ export const PopularQuestion = () => {
             </span>
           </div>
         </div>
-        <a
-          style={{ fontSize: ".95rem" }}
-          className="flex flex-row items-center justify-center align-middle gap-2"
-          href="/userinfo"
-        >
-          Kullanıcıya Git
-          <FaHouseUser size={25} />
-        </a>
+        {url !== "userinfo" && (
+          <a
+            style={{ fontSize: ".95rem" }}
+            className="flex flex-row items-center justify-center align-middle gap-2"
+            href="/userinfo"
+          >
+            Kullanıcıya Git
+            <FaHouseUser size={25} />
+          </a>
+        ) || null}
       </div>
       <div
         style={{
@@ -72,4 +75,8 @@ export const PopularQuestion = () => {
       </div>
     </div>
   );
+};
+
+PopularQuestion.propTypes = {
+  url: PropTypes.node,
 };
