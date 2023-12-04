@@ -1,0 +1,26 @@
+# fly.toml app configuration file generated for mahe-english on 2023-12-02T20:16:03+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "mahe-english"
+primary_region = "ams"
+
+[mounts]
+  destination = "/pb/pb_data"
+  source = "pb_data"
+
+[build]
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 512
