@@ -1,24 +1,18 @@
-import LoginSignUp from "./Components/LoginSignUp/LoginSignUp";
-import ReactPlayer from "react-player";
+import { Route, Routes } from "react-router-dom";
+import { HomePage } from "./Pages/HomePage/HomePage";
+import LoginPage from "./Pages/LoginPage";
+import { UserInfoPage } from "./Pages/UserInfoPage/UserInfoPage";
+import { UserPage } from "./Pages/UserPage/UserPage";
 
 function App() {
   return (
-    <div className="appDiv">
-      <ReactPlayer
-        url="https://minio.asggrup.com/storage/Root/5239-glomil/TEKNOLOJI_WEB.mp4"
-        playing
-        loop
-        muted
-        width="100%"
-        height="100%"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          zIndex: "-1",
-        }}
-      />
-      <LoginSignUp />
+    <div>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/homepage" element={<HomePage />} />
+        <Route path="/userinfo" element={<UserInfoPage />} />
+        <Route path="/userpage" element={<UserPage />} />
+      </Routes>
     </div>
   );
 }

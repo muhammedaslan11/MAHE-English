@@ -17,6 +17,7 @@ export const login = async (email, password) => {
     return true;
   } catch (error) {
     toast.error(error.message);
+    window.location.reload();
     return false;
   }
 };
