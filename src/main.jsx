@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomePage } from "./Pages/HomePage/HomePage.jsx";
 import { UserPage } from "./Pages/UserPage/UserPage.jsx";
 import UserSettings from "./Pages/UserSettings/UserSettings.jsx";
+import UserStats from "./Pages/UserStats/UserStats.jsx";
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/usersettings",
     element: <UserSettings />,
+  },
+  {
+    path: "/userstats",
+    element: <UserStats />,
   },
 ]);
 

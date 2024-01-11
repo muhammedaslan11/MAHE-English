@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 
-export const PageContainer = ({ children }) => {
+export const PageContainer = ({ children, }) => {
   return (
     <div
       style={{ backgroundColor: "#E0F4FF" }}
@@ -89,7 +89,7 @@ export const Column = ({
 export const Row = ({ children, width, direction }) => {
   let w = !width ? "full" : width;
   let d = direction ? direction : null;
-  return <div className={`flex flex-row gap-2 w-${w} ${d}`}>{children}</div>;
+  return <div className={`flex flex-row justify-center gap-2 w-${w} ${d}`}>{children}</div>;
 };
 
 PageContainer.propTypes = {
