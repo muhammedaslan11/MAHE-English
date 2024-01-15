@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomePage } from "./Pages/HomePage/HomePage.jsx";
 import { UserPage } from "./Pages/UserPage/UserPage.jsx";
 import UserSettings from "./Pages/UserSettings/UserSettings.jsx";
@@ -37,6 +37,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
+      
     </BrowserRouter>
   </React.StrictMode>
 );
