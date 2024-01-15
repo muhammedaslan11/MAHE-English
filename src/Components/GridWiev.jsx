@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 
-export const PageContainer = ({ children }) => {
+export const PageContainer = ({ children, }) => {
   return (
     <div
       style={{ backgroundColor: "#E0F4FF" }}
@@ -14,7 +14,7 @@ export const PageContainer = ({ children }) => {
 
 export const Container = ({ children, overflow, direction }) => {
   let o = !overflow ? "overflow-hidden" : overflow;
-  let d = !direction ? null : direction;
+  let d = !direction ? "none" : direction;
 
   return (
     <div
@@ -24,7 +24,7 @@ export const Container = ({ children, overflow, direction }) => {
         boxShadow:
           "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
       }}
-      className={`h-full px-12 py-4 flex ${o} ${d}`}
+      className={`h-full max-w-screen-xl px-12 py-4 flex ${o} ${d}`}
     >
       {children}
     </div>
@@ -93,7 +93,7 @@ export const Column = ({
 export const Row = ({ children, width, direction }) => {
   let w = !width ? "full" : width;
   let d = direction ? direction : null;
-  return <div className={`flex flex-row gap-2 w-${w} ${d}`}>{children}</div>;
+  return <div className={`flex flex-row justify-center gap-2 w-${w} ${d}`}>{children}</div>;
 };
 
 PageContainer.propTypes = {

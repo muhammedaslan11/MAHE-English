@@ -1,3 +1,4 @@
+
 import {
   FaRegCalendarDays,
   FaPaintbrush,
@@ -17,29 +18,49 @@ import { RecentQuestion } from "../../Components/RecentQuestion";
 import { UserComment } from "../../Components/UserComment";
 import { useState } from "react";
 
+
+import Sidebar from "../../Components/Sidebar/Sidebar";
+
+
 export const UserPage = () => {
   const [state, setState] = useState(false);
 
   return (
-    <PageContainer>
-      <Container direction={"flex-col"}>
-        <Column>
-          <div style={{ width: "150px", height: "150px", alignSelf: "center" }}>
-            <img
-              className="w-full h-full rounded-full"
-              src="https://minio.asggrup.com/storage/Root/5239-glomil/MuhammedAslan2.png"
-              alt="user"
-            />
+  
+      <div className="flex h-screen " style={{backgroundColor:"#131f24"}}>
+        <Sidebar/>
+       
+        <div>
+          <div width={"60%"}>
+            <PopularQuestion />
           </div>
-          <div
-            style={{
-              boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
-            }}
-            className="bg-white self-center  flex rounded-[10px] flex-col p-5 gap-2 text-center w-2/3"
-          >
-            <p
-              style={{ borderBottom: "1px solid grey", paddingBottom: ".5rem" }}
+          <div >
+            <div
+              style={{
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px", backgroundColor:"#131f24", color: "white", width:"95.8%"
+              }}
+              className="  border flex rounded-[10px] flex-col p-5 gap-2 m-6"
             >
+              sdfsdf
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="flex items-center flex-col gap-3 ">
+            <div className="w-40 h-40">
+              <img
+                className="w-full h-full rounded-full ml-3 mt-5"
+                src="https://minio.asggrup.com/storage/Root/5239-glomil/MuhammedAslan2.png"
+                alt="user"
+              />
+            </div>
+            <div
+              style={{
+                boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px", backgroundColor:"#131f24", color:"white"
+              }}
+              className=" border ml-5 mt-10 flex rounded-[10px] flex-col p-5 gap-2"
+            >
+              <p>
               User's Stats
             </p>
             <div className="flex gap-6 justify-center">
@@ -74,57 +95,9 @@ export const UserPage = () => {
               <button onClick={() => setState(!state)}>a</button>
             </div>
           </div>
-        </Column>
-        <Column>
-          <Row>
-            <Column height={"530px"} width={"50%"}>
-              {(state && (
-                <>
-                  <PopularQuestion url={"userinfo"} />
-                  <PopularQuestion url={"userinfo"} />
-                  <PopularQuestion url={"userinfo"} />
-                  <PopularQuestion url={"userinfo"} />
-                  <PopularQuestion url={"userinfo"} />
-                </>
-              )) || (
-                <Column center={true}>
-                  <RecentQuestion width={"80%"} />
-                  <RecentQuestion width={"80%"} />
-                  <RecentQuestion width={"80%"} />
-                  <RecentQuestion width={"80%"} />
-                  <RecentQuestion width={"80%"} />
-                  <RecentQuestion width={"80%"} />
-                  <RecentQuestion width={"80%"} />
-                  <RecentQuestion width={"80%"} />
-                </Column>
-              )}
-            </Column>
-            <Column height={"530px"} width={"50%"}>
-              <div
-                style={{
-                  boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
-                }}
-                className="bg-white flex rounded-[10px] flex-col p-5 gap-2"
-              >
-                <p
-                  style={{
-                    borderBottom: "1px solid grey",
-                    paddingBottom: ".6rem",
-                  }}
-                  className="text-center"
-                >
-                  Comments About User
-                </p>
-                <UserComment />
-                <UserComment />
-                <UserComment />
-                <UserComment />
-                <UserComment />
-              </div>
-            </Column>
-          </Row>
-        </Column>
-      </Container>
-    </PageContainer>
+        </div>
+      </div>
+      </div>
+   
   );
 };
