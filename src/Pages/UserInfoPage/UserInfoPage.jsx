@@ -40,7 +40,7 @@ export const UserInfoPage = () => {
             <p
               style={{ borderBottom: "1px solid grey", paddingBottom: ".5rem" }}
             >
-              User's Stats
+              Users Stats
             </p>
             <div className="flex gap-6 justify-center">
               <div className="flex flex-col gap-2">

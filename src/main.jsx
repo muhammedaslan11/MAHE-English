@@ -1,9 +1,8 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 
-import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomePage } from "./Pages/HomePage/HomePage.jsx";
 import { UserPage } from "./Pages/UserPage/UserPage.jsx";
 import UserSettings from "./Pages/UserSettings/UserSettings.jsx";
@@ -34,10 +33,5 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-      
-    </BrowserRouter>
-  </React.StrictMode>
+  <RouterProvider router={router} />
 );

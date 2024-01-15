@@ -18,7 +18,7 @@ export const HomePage = () => {
         <Sidebar/>
         <div className="flex flex-col" >
           {levels.map((level, key) => (
-            <button
+            <a href="/userinfo"
               onClick={() => setLevel(level)}
               key={key}
               style={{
@@ -27,7 +27,7 @@ export const HomePage = () => {
               className="flex border  rounded-[10px] flex-col p-5 ml-6 mt-6 "
             >
               {level} Seviyesi
-            </button>
+            </a>
           ))}
         </div>
         <div>

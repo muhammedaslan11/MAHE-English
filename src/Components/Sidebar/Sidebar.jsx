@@ -1,3 +1,4 @@
+import { Avatar } from "@chakra-ui/avatar";
 import { FaGift } from "react-icons/fa";
 import { FaDumbbell } from "react-icons/fa";
 import { FaChartBar } from "react-icons/fa";
@@ -45,7 +46,13 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
+      <div>
+      <div className="w-40 mt-16">
+      <Avatar src="https://bit.ly/broken-link" />
+       </div>
+      </div>
     </article>
+
   </div>
   )
 }

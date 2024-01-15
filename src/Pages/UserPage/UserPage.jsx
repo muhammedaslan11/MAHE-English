@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa6";
 
 
-import { useState } from "react";
+// import { useState } from "react";
 
 
 import Sidebar from "../../Components/Sidebar/Sidebar";
@@ -15,7 +15,7 @@ import { PopularQuestion } from "../../Components/PopularQuestion";
 
 
 export const UserPage = () => {
-  const [state, setState] = useState(false);
+  // const [state, setState] = useState(false);
 
   return (
   
@@ -65,26 +65,26 @@ export const UserPage = () => {
               </div>
               <div className="flex flex-col gap-2">
                 <span>Created Questions</span>
-                <span className="flex gap-1 items-center justify-center">
+                <span className="flex gap-1 items-center justify-center w-max">
                   <FaPaintbrush size={18} />
                   10
                 </span>
               </div>
               <div className="flex flex-col gap-2">
                 <span>Answered Questions</span>
-                <span className="flex gap-1 items-center justify-center">
+                <span className="flex gap-1 items-center justify-center w-max">
                   <FaClipboardQuestion size={18} />
                   10
                 </span>
               </div>
               <div className="flex flex-col gap-2">
                 <span>Awrage Point</span>
-                <span className="flex gap-1 items-center justify-center">
+                <span className="flex gap-1 items-center justify-center w-max">
                   <FaFire size={18} />
                   8.7
                 </span>
               </div>
-              <button onClick={() => setState(!state)}>a</button>
+              {/* <button onClick={() => setState(!state)}>a</button> */}
             </div>
           </div>
         </div>
