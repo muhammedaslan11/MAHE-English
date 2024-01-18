@@ -1,0 +1,13 @@
+.stroke-tremor-border{
+    stroke: #fff;
+    opacity: 0.4;
+}
+.fill-tremor-content {
+fill: #fff;
+}
+.text-tremor-content {
+color: #fff;
+}
+.recharts-tooltip-wrapper{
+    fill: #fff;
+}

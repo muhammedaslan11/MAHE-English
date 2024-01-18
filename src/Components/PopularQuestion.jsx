@@ -14,7 +14,7 @@ export const PopularQuestion = ({ url }) => {
         backgroundColor: "#131f24",
         color: "white",
       }}
-      className="flex border  rounded-[10px] flex-col p-5 gap-3 m-6"
+      className="flex border-b  flex-col p-5 gap-5 m-6"
     >
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-4">
@@ -46,7 +46,6 @@ export const PopularQuestion = ({ url }) => {
       <div
         style={{
           borderTop: "1px solid lightGrey",
-          borderBottom: "1px solid lightGrey",
           padding: "1rem 0",
         }}
         className="h-26"

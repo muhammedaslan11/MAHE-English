@@ -7,6 +7,7 @@ import { HomePage } from "./Pages/HomePage/HomePage.jsx";
 import { UserPage } from "./Pages/UserPage/UserPage.jsx";
 import UserSettings from "./Pages/UserSettings/UserSettings.jsx";
 import UserStats from "./Pages/UserStats/UserStats.jsx";
+import PointChart from "./Pages/PointsChart/PointChart.jsx";
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
     path: "/userstats",
     element: <UserStats />,
   },
+  {
+    path:"/pointschart",
+    element: <PointChart />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

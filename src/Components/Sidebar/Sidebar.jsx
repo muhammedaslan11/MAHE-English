@@ -1,4 +1,4 @@
-import { Avatar } from "@chakra-ui/avatar";
+
 import { FaGift } from "react-icons/fa";
 import { FaDumbbell } from "react-icons/fa";
 import { FaChartBar } from "react-icons/fa";
@@ -28,7 +28,7 @@ const Sidebar = () => {
           <li>
             {" "}
             <FaChartBar />
-            PUAN TABLOLARI
+           <a href="/pointschart">PUAN TABLOLARI</a> 
           </li>
           <li>
             <FaCog />
@@ -47,8 +47,13 @@ const Sidebar = () => {
         </ul>
       </div>
       <div>
-      <div className="w-40 mt-16">
-      <Avatar src="https://bit.ly/broken-link" />
+      <div className="w-40 mt-16 ">
+      <img
+            className="w-full h-full rounded-full flex  items-center"
+            src="https://minio.asggrup.com/storage/Root/5239-glomil/MuhammedAslan2.png"
+            alt="user"
+          />
+          <p className="flex text-center justify-center mt-3 text-lg">Muhammad Kaplan</p>
        </div>
       </div>
     </article>

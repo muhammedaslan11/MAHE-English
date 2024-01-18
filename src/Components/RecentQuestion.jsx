@@ -14,7 +14,7 @@ export const RecentQuestion = ({ width }) => {
         width: width ? width : "",
         boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 12px",
       }}
-      className=" flex border  rounded-[10px] flex-col p-5 gap-3 m-6"
+      className=" flex border-b flex-col p-5 gap-3 m-6"
     >
       <div className="flex items-center justify-center gap-4">
         <div className="w-14">
@@ -39,7 +39,6 @@ export const RecentQuestion = ({ width }) => {
       <div
         style={{
           borderTop: "1px solid lightGrey",
-          borderBottom: "1px solid lightGrey",
           padding: ".6rem 0",
         }}
       >
