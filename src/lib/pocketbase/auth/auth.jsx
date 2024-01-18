@@ -27,6 +27,7 @@ export const logout = () => {
   console.clear();
   console.log("Logout successful");
   localStorage.clear();
+  location.href = "/"
 };
 
 export const SignUp = async (data) => {

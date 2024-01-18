@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import  {  useState } from "react";
 import { FaUserAlt, FaLock, FaEnvelope } from "react-icons/fa";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import "./LoginSignUp.css";
-import { SignUp, login, logout } from "../../lib/pocketbase/auth/auth";
+import { SignUp, login } from "../../lib/pocketbase/auth/auth";
 import toast, { Toaster } from "react-hot-toast";
 
 const LoginSignUp = () => {
@@ -76,17 +76,17 @@ const LoginSignUp = () => {
       handleLogin();
     }
   };
-  const handleLogout = () => {
-    logout();
-  };
+  // const handleLogout = () => {
+  //   logout();
+  // };
   return (
     <>
-      <button
+      {/* <button
         className="bg-yellow-500 p-2 rounded-xl hover:bg-blue-500"
         onClick={handleLogout}
       >
         log out
-      </button>
+      </button> */}
       <Toaster position="top-right" />
       <div className="bigcontainer shadow-xl rounded-md">
         <div className="header">
@@ -130,7 +130,7 @@ const LoginSignUp = () => {
                 </button>
               </div>
               <div className="under-text">
-                If you don't have an account!{" "}
+                If you dont have an account!{" "}
                 <span
                   onClick={() => {
                     SetAction("Sign Up");

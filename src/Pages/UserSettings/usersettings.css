@@ -86,19 +86,19 @@ li{
   user-select: auto;
 }
 
-button:hover:not(:disabled) {
+.button:hover:not(:disabled) {
   filter: brightness(1.1);
 }
 
-button:disabled {
+.button:disabled {
   cursor: auto;
 }
 
-button:active:after {
+.button:active:after {
   border-width: 0 0 0px;
 }
 
-button:active {
+.button:active {
   padding-bottom: 10px;
 }
 .group {

@@ -58,7 +58,7 @@ const customTooltip = (props) => {
   const { payload, active } = props;
   if (!active || !payload) return null;
   return (
-    <div className="w-56 rounded-tremor-default text-tremor-default bg-tremor-background p-2 shadow-tremor-dropdown border border-tremor-border">
+    <div className="w-56 rounded-tremor-default text-tremor-default bg-tremor-background p-2 shadow-tremor-dropdown border border-white">
       {payload.map((category, idx) => (
         <div key={idx} className="flex flex-1 space-x-2.5">
           <div
@@ -66,7 +66,7 @@ const customTooltip = (props) => {
           />
           <div className="space-y-1">
             <p className="text-tremor-content">{category.dataKey}</p>
-            <p className="font-medium text-tremor-content-emphasis">
+            <p  className="font-medium text-white">
               {category.value} Soru
             </p>
           </div>

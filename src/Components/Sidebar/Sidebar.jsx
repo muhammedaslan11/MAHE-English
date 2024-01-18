@@ -5,6 +5,11 @@ import { FaChartBar } from "react-icons/fa";
 import { FaCog } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
+import { logout } from "../../lib/pocketbase/auth/auth";
+
+const handleLogout = () => {
+  logout();
+};
 
 const Sidebar = () => {
   return (
@@ -42,7 +47,9 @@ const Sidebar = () => {
           </li>
           <li>
             <FaSignOutAlt />
+           <button  className="btn" onClick={handleLogout}>
             OTURUMU KAPAT
+            </button> 
           </li>
         </ul>
       </div>
