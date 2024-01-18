@@ -97,6 +97,7 @@ const LoginSignUp = () => {
           {action === "Login" ? (
             <>
               {/* ------------------------Login----------------------------------- */}
+              <form className="flex flex-col gap-4" onSubmit={handleLoginClick}>          
               <div className="input">
                 <FaEnvelope />
                 <input
@@ -139,6 +140,7 @@ const LoginSignUp = () => {
                   Click Here!
                 </span>
               </div>
+              </form>
               {/* ------------------------Login----------------------------------- */}
             </>
           ) : (
